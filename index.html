@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC Result 2023 :: MAHARASHTRA</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Default styles */
+
+        .logo {
+            display: flex;
+            margin-left: 450px;
+            margin-top: 30px;
+        }
+
+        .pho {
+            height: 93px;
+            margin-bottom: 40px;
+        }
+
+        .sp {
+            margin-left: -500px;
+        }
+
+        .no {
+            margin-left: 400px;
+            margin-top: -30px;
+        }
+
+        .nav {
+            display: flex;
+            margin-left: 630px;
+            margin-top: 60px;
+        }
+
+        .home {
+            text-decoration: none;
+            color: rgb(150, 152, 155);
+            margin-right: 80px;
+        }
+
+        .line {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            width: 655px;
+            margin-left: 115px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-right: 33px;
+        }
+
+        .form-input {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            width: 330px;
+        }
+
+        .form-inpu {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 1px;
+            width: 330px;
+        }
+
+        .form-submit {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: larger;
+            margin-top: 20px;
+            margin-bottom: 35px;
+        }
+
+        .form-submit:hover {
+            background-color: #45a049;
+        }
+
+        #resultHr {
+            display: none;
+            margin-top: 40px;
+        }
+
+        #resultImage {
+            text-align: center;
+        }
+
+        .pooi {
+            margin-left: 180px;
+            margin-bottom: 20px;
+        }
+
+        /* Media queries */
+
+        @media (max-width: 768px) {
+            .logo {
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            .pho {
+                height: 50px;
+            }
+
+            .no {
+                margin-left: 10px;
+                margin-top: 0;
+            }
+
+            .nav {
+                margin-left: 10px;
+                margin-top: 10px;
+                justify-content: center;
+            }
+
+            .home {
+                margin-right: 30px;
+            }
+
+            .form-container {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 10px;
+            }
+
+            .form-input {
+                width: 100%;
+            }
+
+            .form-inpu {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                margin-left: 10px;
+                margin-top: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .pho {
+                height: 50px;
+                margin-bottom: 10px;
+            }
+
+            .no {
+                margin-left: 10px;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            .nav {
+                margin-left: 10px;
+                margin-top: 10px;
+                justify-content: center;
+            }
+
+            .home {
+                margin-right: 10px;
+            }
+
+            .form-container {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 10px;
+                padding: 10px;
+            }
+
+            .form-input {
+                width: 100%;
+            }
+
+            .form-inpu {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="logo pho">
+            <img src="mahastateedu.gif" alt="">
+            <div class="heading">
+                <h3> MAHARASHTRA STATE BOARD OF SECONDARY AND HIGHER <br> SECONDARY EDUCATION, PUNE</h3> <br>
+                <h2>SSC Examination Result March 2023</h2>
+            </div>
+        </div>
+        <a class="sp" href="#"><img src="icon01.gif" alt=""></a>
+        <p class="no">Brought to you by: <a class="nat" href="http://www.nic.in/">NATIONAL INFORMATICS CENTRE</a></p>
+        <div class="ome">
+            <ul class="nav">
+                <a class="home" href="#">Home</a>
+                <a class="home Result" href="#">Results <i class="fa-sharp fa-solid fa-caret-down fa-2xs"
+                        style="color: #080808;"></i></a>
+                <a class="home" href="#">Disclaimer</a>
+            </ul>
+        </div>
+
+        <hr class="h">
+        <br>
+        <div class="line">
+            <div class="form-container">
+                <form id="form">
+                    <label class="form-label" for="rollNumber">Roll Number:*</label>
+                    <input class="form-input" type="text" id="rollNumber" placeholder="Enter Valid Roll Number" required><br>
+
+                    <label class="form-label" for="motherName">Mother's Name:*</label>
+                    <input class="form-inpu" type="text" id="motherName" placeholder="Mother's First Name as given on your admit card/form" required><br>
+                    <p class="pooi">Enter XXX if mother's name not mentioned in form</p>
+                    <input class="form-submit" type="button" value="View Result" onclick="handleSubmit()">
+                </form>
+            </div>
+        </div>
+
+        <hr id="resultHr" class="h">
+        <div id="resultImage"></div>
+
+        <script>
+            function handleSubmit() {
+                var rollNumber = document.getElementById("rollNumber").value;
+                var motherName = document.getElementById("motherName").value;
+
+                // Validate roll number and mother's name
+                if (rollNumber.trim() === "" || motherName.trim() === "") {
+                    alert("Please enter both Roll Number and Mother's Name");
+                    return;
+                }
+
+                // Add your logic here to check the roll number and mother's name
+                // and redirect to the result image if they are valid
+
+                if (rollNumber === "A142553" && motherName === "SHASHIKALA") {
+                    var form = document.getElementById("form");
+                    form.style.display = "none";
+
+                    var resultImage = document.getElementById("resultImage");
+                    resultImage.innerHTML = '<img src="result2.png" alt="Result Image">';
+
+                    var resultHr = document.getElementById("resultHr");
+                    resultHr.style.display = "block";
+                } else {
+                    alert("Invalid Roll Number or Mother's Name");
+                }
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/7221c7cc44.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
