@@ -231,17 +231,17 @@
     }
 
     .form-container {
-        width: 100%;
+        width: 80%;
         margin-left: 0;
         margin-right: 10px;
         padding: 10px;
     }
 
     .form-input {
-        width: 100%;
+        width: 300px;
     }
 
     .form-inpu {
-        width: 100%;
+        width: 300px;
     }
 }
